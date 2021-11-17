@@ -8,6 +8,7 @@ import com.company.designpatterns.builder.components.Transmission;
 public class CarBuilder implements IBuilder {
     private CarType carType;
     private int seats;
+    private String color;
     private Transmission transmission;
     private Engine engine;
 
@@ -29,6 +30,11 @@ public class CarBuilder implements IBuilder {
     @Override
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+
+    @Override
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public Car getRusult() {

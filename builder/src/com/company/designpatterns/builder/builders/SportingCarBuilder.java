@@ -1,15 +1,14 @@
 package com.company.designpatterns.builder.builders;
 
-import com.company.designpatterns.builder.cars.Car;
-import com.company.designpatterns.builder.cars.Truck;
+import com.company.designpatterns.builder.cars.SportingCar;
 import com.company.designpatterns.builder.components.CarType;
 import com.company.designpatterns.builder.components.Engine;
 import com.company.designpatterns.builder.components.Transmission;
 
-public class TruckBuilder implements IBuilder {
+public class SportingCarBuilder implements IBuilder {
     private CarType carType;
-    private String color;
     private int seats;
+    private String color;
     private Transmission transmission;
     private Engine engine;
 
@@ -38,7 +37,7 @@ public class TruckBuilder implements IBuilder {
         this.color = color;
     }
 
-    public Truck getRusult() {
-        return new Truck(carType, seats, engine, transmission);
+    public SportingCar getRusult() {
+        return  new SportingCar(carType, seats, color, engine, transmission);
     }
 }
