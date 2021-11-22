@@ -1,10 +1,10 @@
 package com.designpattern.bridge;
 
+import com.designpattern.bridge.platforms.DisneyPlus;
 import com.designpattern.bridge.platforms.Facebook;
 import com.designpattern.bridge.platforms.IPlatform;
 import com.designpattern.bridge.platforms.TwitchTV;
 import com.designpattern.bridge.transmissions.AdvancedLive;
-import com.designpattern.bridge.transmissions.Live;
 
 public class Main {
 
@@ -12,6 +12,7 @@ public class Main {
         startLive(new TwitchTV());
         startLive(new TwitchTV());
         startLive(new Facebook());
+        startLive(new DisneyPlus());
     }
 
     public static void startLive(IPlatform platform) {
@@ -25,6 +26,7 @@ public class Main {
         advancedLive.broadcasting();
         advancedLive.comments();
         advancedLive.subtitles();
+        advancedLive.recordLive();
         advancedLive.result();
     }
 }

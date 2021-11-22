@@ -14,4 +14,7 @@ public class AdvancedLive extends Live {
     public void comments() {
         System.out.println("Comentários liberados na live");
     }
+    public void recordLive() {
+        System.out.println("Gravando a live");
+    }
 }
